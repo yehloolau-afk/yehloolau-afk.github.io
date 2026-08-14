@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yehloo Lau - Product Designer & AI Tool Builder</title>
+  <meta name="description" content="Product designer and builder of AI-native tools for designers and creators.">
+  <meta property="og:title" content="Yehloo Lau">
+  <meta property="og:description" content="Product designer by day. Builder of AI tools by night.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yehloolau-afk.github.io/">
+  <meta name="theme-color" content="#111111">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f5f5f2;
+      --surface: #ffffff;
+      --surface-soft: #eeeeea;
+      --text: #171717;
+      --muted: #64645f;
+      --line: rgba(23, 23, 23, 0.12);
+      --accent: #0f766e;
+      --accent-ink: #ffffff;
+      --shadow: 0 12px 36px rgba(20, 20, 18, 0.08);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #11120f;
+        --surface: #1a1b17;
+        --surface-soft: #24251f;
+        --text: #f2f1eb;
+        --muted: #aaa79b;
+        --line: rgba(242, 241, 235, 0.14);
+        --accent: #2dd4bf;
+        --accent-ink: #071412;
+        --shadow: 0 12px 36px rgba(0, 0, 0, 0.22);
+      }
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      -webkit-tap-highlight-color: rgba(15, 118, 110, 0.16);
+      touch-action: manipulation;
+    }
+
+    .page {
+      width: min(1120px, 100%);
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    header {
+      min-height: 82vh;
+      display: grid;
+      align-content: space-between;
+      gap: 40px;
+      padding: 18px 0 48px;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .mark {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+
+    .mark-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 9px;
+      display: grid;
+      place-items: center;
+      background: var(--text);
+      color: var(--bg);
+      font-weight: 800;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-links a,
+    .chip {
+      min-height: 38px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 14px;
+      background: color-mix(in srgb, var(--surface) 72%, transparent);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+      gap: 48px;
+      align-items: end;
+    }
+
+    .eyebrow {
+      margin: 0 0 18px;
+      color: var(--accent);
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 760px;
+      font-size: clamp(44px, 8vw, 92px);
+      line-height: 0.95;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      max-width: 690px;
+      margin: 28px 0 0;
+      color: var(--muted);
+      font-size: clamp(18px, 2.4vw, 24px);
+      line-height: 1.45;
+    }
+
+    .hero-panel {
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .panel-kicker {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .panel-text {
+      margin: 0;
+      color: var(--text);
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 28px;
+    }
+
+    .button {
+      min-height: 46px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 0 18px;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    .button.primary {
+      border-color: var(--accent);
+      background: var(--accent);
+      color: var(--accent-ink);
+    }
+
+    main {
+      display: grid;
+      gap: 56px;
+      padding-bottom: 56px;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 24px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(26px, 4vw, 42px);
+      letter-spacing: 0;
+    }
+
+    .section-note {
+      max-width: 420px;
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .project {
+      min-height: 260px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 22px;
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+      transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-3px);
+      border-color: color-mix(in srgb, var(--accent) 55%, var(--line));
+      box-shadow: var(--shadow);
+    }
+
+    .project-top {
+      display: grid;
+      gap: 12px;
+    }
+
+    .project-icon {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      background: var(--surface-soft);
+      font-size: 22px;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 22px;
+      letter-spacing: 0;
+    }
+
+    .project p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .project-link {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 28px 0 18px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 860px) {
+      .page { padding: 18px; }
+      header { min-height: auto; padding-bottom: 34px; }
+      .hero { grid-template-columns: 1fr; gap: 28px; }
+      .hero-panel { order: -1; }
+      .projects { grid-template-columns: 1fr; }
+      .section-head { display: grid; }
+    }
+
+    @media (max-width: 560px) {
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+      .nav-links {
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 2px;
+      }
+      .nav-links a {
+        flex: 0 0 auto;
+      }
+      .actions {
+        display: grid;
+      }
+      .button {
+        width: 100%;
+      }
+      .footer {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <nav class="nav" aria-label="Primary">
+        <a class="mark" href="/" aria-label="Yehloo Lau home">
+          <span class="mark-icon">Y</span>
+          <span>Yehloo Lau</span>
+        </a>
+        <div class="nav-links">
+          <a href="#projects">Projects</a>
+          <a href="https://github.com/yehloolau-afk">GitHub</a>
+          <a href="https://x.com/yehloolau">X</a>
+        </div>
+      </nav>
+
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Product designer by day. AI tool builder by night.</p>
+          <h1>Design ideas, shipped as working products.</h1>
+          <p class="lead">I use coding agents to turn product design questions into real tools: news hubs, knowledge systems, voice workflows, patent scanners, and education automation.</p>
+          <div class="actions">
+            <a class="button primary" href="https://yehloolau-afk.github.io/ai-news-station/">Open AI News Station</a>
+            <a class="button" href="https://github.com/yehloolau-afk">View GitHub</a>
+          </div>
+        </div>
+        <aside class="hero-panel" aria-label="About">
+          <p class="panel-kicker">How I Build</p>
+          <p class="panel-text">I start with a problem, not a stack. Most tools begin as a single HTML file, then grow only when the workflow proves it needs more structure.</p>
+        </aside>
+      </section>
+    </header>
+
+    <main>
+      <section id="projects" aria-labelledby="projects-title">
+        <div class="section-head">
+          <h2 id="projects-title">Featured Projects</h2>
+          <p class="section-note">AI-native tools for designers, creators, researchers, and teams that need useful working software more than polished mockups.</p>
+        </div>
+        <div class="projects">
+          <a class="project" href="https://yehloolau-afk.github.io/ai-news-station/">
+            <span class="project-top">
+              <span class="project-icon">N</span>
+              <h3>AI News Station</h3>
+              <p>AI news hub with daily digests, model-release and funding timelines, an AI tools directory, and a cross-filterable firehose.</p>
+            </span>
+            <span class="project-link">Open site</span>
+          </a>
+
+          <a class="project" href="https://github.com/yehloolau-afk/ai-daily-note">
+            <span class="project-top">
+              <span class="project-icon">V</span>
+              <h3>AI Daily Note</h3>
+              <p>Cross-device voice journaling tool for capturing thoughts into an Obsidian table through macOS and iOS workflows.</p>
+            </span>
+            <span class="project-link">View repository</span>
+          </a>
+
+          <a class="project" href="https://github.com/yehloolau-afk/lingan-tanzhen">
+            <span class="project-top">
+              <span class="project-icon">P</span>
+              <h3>Patent Scout</h3>
+              <p>Patent feasibility scanner for product ideas, with structured directions and evidence links for verification.</p>
+            </span>
+            <span class="project-link">View repository</span>
+          </a>
+
+          <a class="project" href="https://github.com/yehloolau-afk/college-of-design">
+            <span class="project-top">
+              <span class="project-icon">D</span>
+              <h3>College of Design</h3>
+              <p>A curated knowledge platform for designers growing in the AI era, covering UX fundamentals, AIGC workflows, and career growth.</p>
+            </span>
+            <span class="project-link">View repository</span>
+          </a>
+
+          <a class="project" href="https://github.com/yehloolau-afk/wanhuatong">
+            <span class="project-top">
+              <span class="project-icon">W</span>
+              <h3>WanHuaTong</h3>
+              <p>Elementary school text-to-video automation pipeline: lesson text to storyboard, images, voice, and animation.</p>
+            </span>
+            <span class="project-link">View repository</span>
+          </a>
+
+          <a class="project" href="https://github.com/yehloolau-afk/fintech-clone">
+            <span class="project-top">
+              <span class="project-icon">F</span>
+              <h3>Fintech Leon</h3>
+              <p>AI-cloned fintech product UI built by extracting design tokens and rebuilding components from a live reference.</p>
+            </span>
+            <span class="project-link">View repository</span>
+          </a>
+        </div>
+      </section>
+
+      <section aria-labelledby="stack-title">
+        <div class="section-head">
+          <h2 id="stack-title">Working Material</h2>
+          <p class="section-note">Claude Code, single-file HTML, CSS, JavaScript, Python, GitHub Pages, Cloudflare Workers, and product taste under pressure.</p>
+        </div>
+        <div class="stack" aria-label="Stack">
+          <span class="chip">Product Design</span>
+          <span class="chip">AI Tools</span>
+          <span class="chip">HTML / CSS / JS</span>
+          <span class="chip">Python</span>
+          <span class="chip">GitHub Pages</span>
+          <span class="chip">Cloudflare Workers</span>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>Yehloo Lau</span>
+      <span><a href="https://aistation.substack.com/subscribe">Substack</a> · <a href="https://x.com/yehloolau">X</a> · <a href="https://github.com/yehloolau-afk">GitHub</a></span>
+    </footer>
+  </div>
+</body>
+</html>
