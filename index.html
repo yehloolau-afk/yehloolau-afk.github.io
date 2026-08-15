@@ -278,9 +278,37 @@
       line-height: 1.6;
     }
 
-    .project-link {
-      color: var(--accent);
+    .project-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .project-action {
+      min-height: 38px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 12px;
+      border: 1px solid var(--accent);
+      border-radius: 8px;
+      background: var(--accent);
+      color: var(--accent-ink);
+      font-size: 14px;
       font-weight: 700;
+    }
+
+    .project-action.secondary {
+      border-color: var(--line);
+      background: transparent;
+      color: var(--text);
+    }
+
+    .project-action.disabled {
+      border-color: var(--line);
+      background: var(--surface-soft);
+      color: var(--muted);
+      cursor: default;
     }
 
     .stack {
@@ -328,6 +356,9 @@
       .button {
         width: 100%;
       }
+      .project-action {
+        flex: 1 1 120px;
+      }
       .footer {
         align-items: flex-start;
         flex-direction: column;
@@ -374,59 +405,76 @@
           <p class="section-note">AI-native tools for designers, creators, researchers, and teams that need useful working software more than polished mockups.</p>
         </div>
         <div class="projects">
-          <a class="project" href="https://yehloolau-afk.github.io/ai-news-station/">
+          <article class="project">
             <span class="project-top">
               <span class="project-icon">N</span>
               <h3>AI News Station</h3>
               <p>AI news hub with daily digests, model-release and funding timelines, an AI tools directory, and a cross-filterable firehose.</p>
             </span>
-            <span class="project-link">Open site</span>
-          </a>
+            <span class="project-actions">
+              <a class="project-action" href="https://yehloolau-afk.github.io/ai-news-station/">Open</a>
+              <a class="project-action secondary" href="https://github.com/yehloolau-afk/ai-news-station">Code</a>
+            </span>
+          </article>
 
-          <a class="project" href="https://github.com/yehloolau-afk/ai-daily-note">
+          <article class="project">
             <span class="project-top">
               <span class="project-icon">V</span>
               <h3>AI Daily Note</h3>
               <p>Cross-device voice journaling tool for capturing thoughts into an Obsidian table through macOS and iOS workflows.</p>
             </span>
-            <span class="project-link">View repository</span>
-          </a>
+            <span class="project-actions">
+              <a class="project-action" href="https://yehloolau-afk.github.io/ai-daily-note/">Open</a>
+              <a class="project-action secondary" href="https://github.com/yehloolau-afk/ai-daily-note">Code</a>
+            </span>
+          </article>
 
-          <a class="project" href="https://github.com/yehloolau-afk/lingan-tanzhen">
+          <article class="project">
             <span class="project-top">
               <span class="project-icon">P</span>
               <h3>Patent Scout</h3>
               <p>Patent feasibility scanner for product ideas, with structured directions and evidence links for verification.</p>
             </span>
-            <span class="project-link">View repository</span>
-          </a>
+            <span class="project-actions">
+              <a class="project-action" href="https://yehloolau-afk.github.io/lingan-tanzhen/">Open</a>
+              <a class="project-action secondary" href="https://github.com/yehloolau-afk/lingan-tanzhen">Code</a>
+            </span>
+          </article>
 
-          <a class="project" href="https://github.com/yehloolau-afk/college-of-design">
+          <article class="project">
             <span class="project-top">
               <span class="project-icon">D</span>
               <h3>College of Design</h3>
               <p>A curated knowledge platform for designers growing in the AI era, covering UX fundamentals, AIGC workflows, and career growth.</p>
             </span>
-            <span class="project-link">View repository</span>
-          </a>
+            <span class="project-actions">
+              <a class="project-action" href="https://yehloolau-afk.github.io/college-of-design/">Open</a>
+              <a class="project-action secondary" href="https://github.com/yehloolau-afk/college-of-design">Code</a>
+            </span>
+          </article>
 
-          <a class="project" href="https://github.com/yehloolau-afk/wanhuatong">
+          <article class="project">
             <span class="project-top">
               <span class="project-icon">W</span>
               <h3>WanHuaTong</h3>
               <p>Elementary school text-to-video automation pipeline: lesson text to storyboard, images, voice, and animation.</p>
             </span>
-            <span class="project-link">View repository</span>
-          </a>
+            <span class="project-actions">
+              <a class="project-action" href="https://yehloolau-afk.github.io/wanhuatong/">Open</a>
+              <a class="project-action secondary" href="https://github.com/yehloolau-afk/wanhuatong">Code</a>
+            </span>
+          </article>
 
-          <a class="project" href="https://github.com/yehloolau-afk/fintech-clone">
+          <article class="project">
             <span class="project-top">
               <span class="project-icon">F</span>
               <h3>Fintech Leon</h3>
               <p>AI-cloned fintech product UI built by extracting design tokens and rebuilding components from a live reference.</p>
             </span>
-            <span class="project-link">View repository</span>
-          </a>
+            <span class="project-actions">
+              <span class="project-action disabled">Private case study</span>
+            </span>
+          </article>
         </div>
       </section>
 
