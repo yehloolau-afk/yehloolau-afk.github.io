@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Redirecting · Yehloo Lau</title>
+  <meta name="robots" content="noindex">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f5f5f2;
+      --surface: #fff;
+      --text: #171717;
+      --muted: #64645f;
+      --line: rgba(23, 23, 23, 0.12);
+      --accent: #0f766e;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #11120f;
+        --surface: #1a1b17;
+        --text: #f2f1eb;
+        --muted: #aaa79b;
+        --line: rgba(242, 241, 235, 0.14);
+        --accent: #2dd4bf;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      background: var(--bg);
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    main {
+      width: min(520px, 100%);
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+    }
+    h1 {
+      margin: 0 0 12px;
+      font-size: 28px;
+      letter-spacing: 0;
+    }
+    p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    a {
+      min-height: 42px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 14px;
+      border-radius: 8px;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 700;
+      text-decoration: none;
+      -webkit-tap-highlight-color: rgba(15, 118, 110, 0.16);
+      touch-action: manipulation;
+    }
+  </style>
+  <script>
+    (function () {
+      var path = window.location.pathname || "/";
+      var normalized = path.toLowerCase();
+      var target = null;
+
+      if (
+        normalized === "/ai-news-station" ||
+        normalized === "/ai-news-station.html" ||
+        normalized === "/ai-station" ||
+        normalized === "/ai-station.html" ||
+        normalized === "/designer-tool/ai-station.html" ||
+        normalized === "/designer-tools-legacy/ai-station.html"
+      ) {
+        target = "/ai-news-station/";
+      } else if (normalized === "/designer-tool" || normalized.indexOf("/designer-tool/") === 0) {
+        target = "/designer-tools-legacy/";
+      }
+
+      if (target) {
+        window.location.replace(target + window.location.search + window.location.hash);
+      }
+    })();
+  </script>
+</head>
+<body>
+  <main>
+    <h1>页面正在跳转</h1>
+    <p>这个地址可能是旧入口。如果没有自动跳转，请打开 AI News Station。</p>
+    <a href="/ai-news-station/">打开 AI News Station</a>
+  </main>
+</body>
+</html>
