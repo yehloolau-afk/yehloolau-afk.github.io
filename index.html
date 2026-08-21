@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Yehloo Lau - Product Designer & AI Tool Builder</title>
-  <meta name="description" content="Product designer and builder of AI-native tools for designers and creators.">
-  <meta property="og:title" content="Yehloo Lau">
-  <meta property="og:description" content="Product designer by day. Builder of AI tools by night.">
+  <title>yehloo - AI Experience Design Leader</title>
+  <meta name="description" content="AI experience design leader connecting product strategy, human-AI interaction, team capability, and working prototypes.">
+  <meta property="og:title" content="yehloo">
+  <meta property="og:description" content="AI Experience Design Leader · Designer × Builder">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://yehloolau-afk.github.io/">
+  <meta property="og:url" content="https://yehloo-ai.github.io/">
   <meta name="theme-color" content="#111111">
   <style>
     :root {
@@ -134,7 +134,7 @@
     h1 {
       margin: 0;
       max-width: 760px;
-      font-size: clamp(44px, 8vw, 92px);
+      font-size: 80px;
       line-height: 0.95;
       letter-spacing: 0;
     }
@@ -143,7 +143,7 @@
       max-width: 690px;
       margin: 28px 0 0;
       color: var(--muted);
-      font-size: clamp(18px, 2.4vw, 24px);
+      font-size: 22px;
       line-height: 1.45;
     }
 
@@ -215,7 +215,7 @@
 
     h2 {
       margin: 0;
-      font-size: clamp(26px, 4vw, 42px);
+      font-size: 38px;
       letter-spacing: 0;
     }
 
@@ -332,18 +332,23 @@
       .page { padding: 18px; }
       header { min-height: auto; padding-bottom: 34px; }
       .hero { grid-template-columns: 1fr; gap: 28px; }
-      .hero-panel { order: -1; }
+      h1 { font-size: 62px; }
+      h2 { font-size: 34px; }
       .projects { grid-template-columns: 1fr; }
       .section-head { display: grid; }
     }
 
     @media (max-width: 560px) {
+      h1 { font-size: 50px; }
+      h2 { font-size: 30px; }
+      .lead { font-size: 18px; }
+      .hero-panel { display: none; }
       .nav {
-        align-items: flex-start;
-        flex-direction: column;
+        align-items: center;
+        flex-direction: row;
       }
       .nav-links {
-        width: 100%;
+        width: auto;
         overflow-x: auto;
         padding-bottom: 2px;
       }
@@ -351,10 +356,11 @@
         flex: 0 0 auto;
       }
       .actions {
-        display: grid;
+        display: flex;
       }
       .button {
-        width: 100%;
+        width: auto;
+        flex: 1 1 0;
       }
       .project-action {
         flex: 1 1 120px;
@@ -370,30 +376,30 @@
   <div class="page">
     <header>
       <nav class="nav" aria-label="Primary">
-        <a class="mark" href="/" aria-label="Yehloo Lau home">
+        <a class="mark" href="/" aria-label="yehloo home">
           <span class="mark-icon">Y</span>
-          <span>Yehloo Lau</span>
+          <span>yehloo</span>
         </a>
         <div class="nav-links">
           <a href="#projects">Projects</a>
-          <a href="https://github.com/yehloolau-afk">GitHub</a>
+          <a href="https://github.com/yehloo-ai">GitHub</a>
           <a href="https://x.com/yehloolau">X</a>
         </div>
       </nav>
 
       <section class="hero">
         <div>
-          <p class="eyebrow">Product designer by day. AI tool builder by night.</p>
-          <h1>Design ideas, shipped as working products.</h1>
-          <p class="lead">I use coding agents to turn product design questions into real tools: news hubs, knowledge systems, voice workflows, patent scanners, and education automation.</p>
+          <p class="eyebrow">AI Experience Design Leader · Designer × Builder</p>
+          <h1>Shaping AI experiences, teams, and working systems.</h1>
+          <p class="lead">I connect AI product strategy, human-AI interaction, and design-team capability, then use coding agents to make the thinking tangible as working products.</p>
           <div class="actions">
-            <a class="button primary" href="https://yehloolau-afk.github.io/ai-news-station/">Open AI News Station</a>
-            <a class="button" href="https://github.com/yehloolau-afk">View GitHub</a>
+            <a class="button primary" href="https://yehloo-ai.github.io/ai-news-station/">Open AI News Station</a>
+            <a class="button" href="https://github.com/yehloo-ai">View GitHub</a>
           </div>
         </div>
         <aside class="hero-panel" aria-label="About">
-          <p class="panel-kicker">How I Build</p>
-          <p class="panel-text">I start with a problem, not a stack. Most tools begin as a single HTML file, then grow only when the workflow proves it needs more structure.</p>
+          <p class="panel-kicker">Leadership Loop</p>
+          <p class="panel-text">Frame the decision, map the human-AI workflow, prototype early, evaluate usefulness and control, then turn the learning into reusable team capability.</p>
         </aside>
       </section>
     </header>
@@ -402,7 +408,7 @@
       <section id="projects" aria-labelledby="projects-title">
         <div class="section-head">
           <h2 id="projects-title">Featured Projects</h2>
-          <p class="section-note">AI-native tools for designers, creators, researchers, and teams that need useful working software more than polished mockups.</p>
+          <p class="section-note">Selected work showing AI experience direction, workflow design, knowledge systems, and design-led delivery.</p>
         </div>
         <div class="projects">
           <article class="project">
@@ -412,8 +418,8 @@
               <p>AI news hub with daily digests, model-release and funding timelines, an AI tools directory, and a cross-filterable firehose.</p>
             </span>
             <span class="project-actions">
-              <a class="project-action" href="https://yehloolau-afk.github.io/ai-news-station/">Open</a>
-              <a class="project-action secondary" href="https://github.com/yehloolau-afk/ai-news-station">Code</a>
+              <a class="project-action" href="https://yehloo-ai.github.io/ai-news-station/">Open</a>
+              <a class="project-action secondary" href="https://github.com/yehloo-ai/ai-news-station">Code</a>
             </span>
           </article>
 
@@ -424,8 +430,8 @@
               <p>Cross-device voice journaling tool for capturing thoughts into an Obsidian table through macOS and iOS workflows.</p>
             </span>
             <span class="project-actions">
-              <a class="project-action" href="https://yehloolau-afk.github.io/ai-daily-note/">Open</a>
-              <a class="project-action secondary" href="https://github.com/yehloolau-afk/ai-daily-note">Code</a>
+              <a class="project-action" href="https://yehloo-ai.github.io/ai-daily-note/">Open</a>
+              <a class="project-action secondary" href="https://github.com/yehloo-ai/ai-daily-note">Code</a>
             </span>
           </article>
 
@@ -433,11 +439,11 @@
             <span class="project-top">
               <span class="project-icon">P</span>
               <h3>Patent Scout</h3>
-              <p>Patent feasibility scanner for product ideas, with structured directions and evidence links for verification.</p>
+              <p>A patent-feasibility workflow for product ideas. The hosted version is a no-cost functional demo; the local backend implementation remains available in the repository.</p>
             </span>
             <span class="project-actions">
-              <a class="project-action" href="https://yehloolau-afk.github.io/lingan-tanzhen/">Open</a>
-              <a class="project-action secondary" href="https://github.com/yehloolau-afk/lingan-tanzhen">Code</a>
+              <a class="project-action" href="https://yehloo-ai.github.io/lingan-tanzhen/">Open</a>
+              <a class="project-action secondary" href="https://github.com/yehloo-ai/lingan-tanzhen">Code</a>
             </span>
           </article>
 
@@ -448,8 +454,8 @@
               <p>A curated knowledge platform for designers growing in the AI era, covering UX fundamentals, AIGC workflows, and career growth.</p>
             </span>
             <span class="project-actions">
-              <a class="project-action" href="https://yehloolau-afk.github.io/college-of-design/">Open</a>
-              <a class="project-action secondary" href="https://github.com/yehloolau-afk/college-of-design">Code</a>
+              <a class="project-action" href="https://yehloo-ai.github.io/college-of-design/">Open</a>
+              <a class="project-action secondary" href="https://github.com/yehloo-ai/college-of-design">Code</a>
             </span>
           </article>
 
@@ -460,19 +466,20 @@
               <p>Elementary school text-to-video automation pipeline: lesson text to storyboard, images, voice, and animation.</p>
             </span>
             <span class="project-actions">
-              <a class="project-action" href="https://yehloolau-afk.github.io/wanhuatong/">Open</a>
-              <a class="project-action secondary" href="https://github.com/yehloolau-afk/wanhuatong">Code</a>
+              <a class="project-action" href="https://yehloo-ai.github.io/wanhuatong/">Open</a>
+              <a class="project-action secondary" href="https://github.com/yehloo-ai/wanhuatong">Code</a>
             </span>
           </article>
 
           <article class="project">
             <span class="project-top">
-              <span class="project-icon">F</span>
-              <h3>Fintech Leon</h3>
-              <p>AI-cloned fintech product UI built by extracting design tokens and rebuilding components from a live reference.</p>
+              <span class="project-icon">R</span>
+              <h3>AI Role Deck</h3>
+              <p>A visual framework for AI-era role shifts, new design workflows, and the personal capabilities that compound over time.</p>
             </span>
             <span class="project-actions">
-              <span class="project-action disabled">Private case study</span>
+              <a class="project-action" href="https://yehloo-ai.github.io/ai-role-deck/">Open</a>
+              <a class="project-action secondary" href="https://github.com/yehloo-ai/ai-role-deck">Code</a>
             </span>
           </article>
         </div>
@@ -480,12 +487,14 @@
 
       <section aria-labelledby="stack-title">
         <div class="section-head">
-          <h2 id="stack-title">Working Material</h2>
-          <p class="section-note">Claude Code, single-file HTML, CSS, JavaScript, Python, GitHub Pages, Cloudflare Workers, and product taste under pressure.</p>
+          <h2 id="stack-title">Leadership &amp; Working Material</h2>
+          <p class="section-note">The strategic and practical materials I use to move from an ambiguous AI opportunity to a testable product and a reusable team practice.</p>
         </div>
         <div class="stack" aria-label="Stack">
-          <span class="chip">Product Design</span>
-          <span class="chip">AI Tools</span>
+          <span class="chip">AI Product Strategy</span>
+          <span class="chip">UX Leadership</span>
+          <span class="chip">Human-AI Interaction</span>
+          <span class="chip">Design Systems</span>
           <span class="chip">HTML / CSS / JS</span>
           <span class="chip">Python</span>
           <span class="chip">GitHub Pages</span>
@@ -495,8 +504,8 @@
     </main>
 
     <footer class="footer">
-      <span>Yehloo Lau</span>
-      <span><a href="https://aistation.substack.com/subscribe">Substack</a> · <a href="https://x.com/yehloolau">X</a> · <a href="https://github.com/yehloolau-afk">GitHub</a></span>
+      <span>yehloo</span>
+      <span><a href="https://aistation.substack.com/subscribe">Substack</a> · <a href="https://x.com/yehloolau">X</a> · <a href="https://github.com/yehloo-ai">GitHub</a></span>
     </footer>
   </div>
 </body>
